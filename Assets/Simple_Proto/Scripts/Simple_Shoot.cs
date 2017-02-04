@@ -63,5 +63,13 @@ public class Simple_Shoot : MonoBehaviour {
 
 		// apply fire delay
 		cooldown = (float)60 / (float) roundsPerMinute;
+
+		// Fire off the particle systems
+		if (myParticles != null) 
+		{
+			for (int i = 0; i < myParticles.Length; i++) {
+				myParticles [i].Play ();
+			}
+		}
 	}
 }
